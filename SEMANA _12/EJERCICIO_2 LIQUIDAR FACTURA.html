@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIQUIDAR FACTURA</title>
+</head>
+<body>
+    <center>
+    <h1>SUPERMARKET</h1>
+    <h2>FACTURA VENTAS</h2>
+    <script>
+        //Programa que permita capturar el nombre de un producto, su precio unitario y su cantidad, luego calcular subtotal, descuento 10%, iva 19% y neto a pagar. Enviar mensaje Gracias por su compra//
+        //permite colocar simbolo de moneda en la salida
+        const SPeso = new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP',
+        minimumFractionDigits: 0
+        });
+       //variable
+        let precio,cant,desc,iva,netop;
+        var nombrep;
+        //entrada
+        nombrep=prompt("ingrese nombre o producto");
+        precio=parseInt(prompt("ingresee precio o producto"))
+        cant=parseInt(prompt("ingrese cantidad a comprar"))
+        //proceso
+        subt=precio*cant;
+        desd=subt*0,10;
+        iva=(subt-desc)*0,19;
+        netop=subt-desc+iva;
+        //salida
+        document.write("*******LIQUIDACION FaCTURA DE VENTAS******"+"<br>");
+        document.write("***********************************"+"<br>")
+        document.write("producto  comprado..."+nombrep+"&nbsp&nbsp" +"precio producto.."+SPeso.format(precio)+"&nbsp&nbsp"+"cantidad comprada..."+cant+"<br>");
+        document.write("****************************************"+"<br>");
+        document.write("subtotal"+"<br>");
+        document.write(SPeso.format(subt)+"<br>");
+        document.write("DESCUENTO"+"<br>")
+        document.write(SPeso.format(desc)+"<br>");
+        document.write("IVA"+"<br>");
+        document.write(SPeso.format(iva)+"<br>");
+        document.write("neto apagar"+"<br>");
+        document.write(SPeso.format(netop)+"<br>");
+        document.write("gracias por su compra"+"<br>");
+        document.write("*****************************************");
+
+    
+    </script>
+    </center>
+</body>
+</html>                                                            
