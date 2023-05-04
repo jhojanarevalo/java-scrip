@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo splice</title>
+</head>
+<body>
+    <center>
+        <img src="./img/incap.png" alt="" width="150" height="150">
+    <h1>Metodo splice en arrays</h1>
+    <h2>BUSQUEDA / ELIMINACION DE ELEMENTO</h2>
+    <br><br>
+    <p>EL NUEVO ARRAYS ES EL SIGUIENTE...</p>
+    <script>
+        //
+        let num; //length
+        datos=new Array();
+        //
+        num=parseInt(prompt("Ingrese cantidad de elementos a guardar en arrays"));
+    for (i=0;i<num;i++){
+    //recorre arrays
+        datos[i]=prompt("Ingrese dato nuevo al arrays.."+i);
+    }
+    //BUSQUEDA ARRAY
+    let dato=prompt("ingrese dato a eliminar en arrays");
+    let indice=dato.indexOf(dato.trim());
+    //aplicar metodo splice
+    if (indice>-1){
+        let index=datos.splice(indice,1);
+    alert("dato eliminado en array..."+"\n"+"lista nueva"+dato)
+    }
+    document.write(dato+",");
+    console.log(dato);
+    </script>
+</center>
+</body>
+</html>
